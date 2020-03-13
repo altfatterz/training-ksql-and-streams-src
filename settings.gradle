@@ -1,0 +1,32 @@
+rootProject.name = 'training-ksql-and-streams-src'
+
+include ':labs:deployment:streams-app'
+include ':labs:deployment:temp-producer'
+include ':labs:monitoring:jmx-sample'
+include ':labs:monitoring:processor-sample'
+include ':labs:monitoring:word-count'
+include ':labs:security:secure-app'
+//include ':labs:steams-testing:simple-test'
+//include ':labs:steams-testing:wordcount-test'
+include ':labs:steams-writing:gradle-sample'
+include ':labs:steams-writing:join-sample'
+include ':labs:steams-writing:json-sample'
+include ':labs:steams-writing:processor-sample'
+
+include ':solution:deployment:streams-app'
+include ':solution:deployment:temp-producer'
+include ':solution:monitoring:jmx-sample'
+include ':solution:monitoring:processor-sample'
+include ':solution:monitoring:word-count'
+include ':solution:security:secure-app'
+include ':solution:steams-testing:simple-test'
+include ':solution:steams-testing:wordcount-test'
+include ':solution:steams-writing:gradle-sample'
+include ':solution:steams-writing:join-sample'
+include ':solution:steams-writing:json-sample'
+include ':solution:steams-writing:processor-sample'
+
+
+
+
+

@@ -1,5 +1,7 @@
-apply plugin: 'java'
-
+plugins {
+    id 'java'
+    id 'application'
+}
 repositories {
    mavenCentral()
    maven { url "http://packages.confluent.io/maven/" }

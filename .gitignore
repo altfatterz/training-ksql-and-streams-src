@@ -1,8 +1,4 @@
-experiments/
-target/
+.idea
+build
+*.iml
 .gradle
-build/
-.vscode/*
-!.vscode/launch.json
-!.vscode/tasks.json
-.DS_Store
