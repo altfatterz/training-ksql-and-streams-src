@@ -52,7 +52,7 @@ public class JsonSample {
         final Serde<TempReading> temperatureSerde = getJsonSerde();
 
         // TODO: here we construct the Kafka Streams topology
-
+        return null;
     }
 
     private static Serde<TempReading> getJsonSerde(){
@@ -61,7 +61,7 @@ public class JsonSample {
         serdeProps.put("json.value.type", TempReading.class);
 
         // TODO: create a JSON serde for the TempReading class using KafkaJson serdes
-
+        return null;
     }
 
     private static Properties getConfig(){

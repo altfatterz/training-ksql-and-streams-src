@@ -35,7 +35,7 @@ public class JoinSample {
         final Serde<String> stringSerde = Serdes.String();
 
         // TODO: here we construct the Kafka Streams topology
-
+        return null;
     }
 
     private static Properties getConfig(){
