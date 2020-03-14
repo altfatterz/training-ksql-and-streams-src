@@ -53,7 +53,7 @@ public class JoinSample {
     private static Properties getConfig(){
         Properties settings = new Properties();
         settings.put(StreamsConfig.APPLICATION_ID_CONFIG, APPLICATION_ID);
-        settings.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka:9092");
+        settings.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:19092");
         return settings;        
     }
 
