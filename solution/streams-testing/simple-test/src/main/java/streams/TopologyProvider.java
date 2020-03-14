@@ -5,6 +5,7 @@ import org.apache.kafka.streams.state.Stores;
 import org.apache.kafka.streams.Topology;
 
 public class TopologyProvider {
+
     public Topology getTopology() {
         Topology topology = new Topology();
         topology.addSource("sourceProcessor", "input-topic");
@@ -18,4 +19,5 @@ public class TopologyProvider {
         topology.addSink("sinkProcessor", "result-topic", "aggregator");
         return topology;
     }
+
 }

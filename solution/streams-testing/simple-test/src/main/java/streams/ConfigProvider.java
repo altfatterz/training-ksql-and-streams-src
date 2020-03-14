@@ -5,6 +5,7 @@ import org.apache.kafka.streams.StreamsConfig;
 import java.util.Properties;
 
 public class ConfigProvider {
+
     public Properties getConfig(String bootstrapServers) {
         Properties config = new Properties();
         config.setProperty(StreamsConfig.APPLICATION_ID_CONFIG, "maxAggregation");
@@ -13,4 +14,5 @@ public class ConfigProvider {
         config.setProperty(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.Long().getClass().getName());
         return config;
     }
+
 }

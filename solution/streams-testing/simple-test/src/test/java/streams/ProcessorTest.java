@@ -20,12 +20,18 @@ import org.junit.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class ProcessorTest {
+
+    // can simulate a full blown Kafka cluster
     private TopologyTestDriver testDriver;
+
     private KeyValueStore<String, Long> store;
     
     private StringDeserializer stringDeserializer = new StringDeserializer();
     private LongDeserializer longDeserializer = new LongDeserializer();
-    private ConsumerRecordFactory<String, Long> recordFactory = new ConsumerRecordFactory<>(new StringSerializer(), new LongSerializer());
+
+    // used to create test records
+    private ConsumerRecordFactory<String, Long> recordFactory =
+            new ConsumerRecordFactory<>(new StringSerializer(), new LongSerializer());
     
     @Before
     public void setup() {

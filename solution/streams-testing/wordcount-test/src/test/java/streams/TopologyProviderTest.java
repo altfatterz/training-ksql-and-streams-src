@@ -26,6 +26,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder; 
 
 public class TopologyProviderTest {
+
     @ClassRule
     public static final EmbeddedKafkaCluster CLUSTER = new EmbeddedKafkaCluster(1);
 
@@ -55,7 +56,7 @@ public class TopologyProviderTest {
         produceInputData();
 
         // Step 5: Verify the application's output data.
-        verifyOutputData(streams);
+        verifyOutputData();
 
         streams.close();
     }
@@ -99,7 +100,7 @@ public class TopologyProviderTest {
             inputTopic, inputValues, producerConfig, Time.SYSTEM);
     }
 
-    private void verifyOutputData(KafkaStreams streams) throws Exception {
+    private void verifyOutputData() throws Exception {
         List<KeyValue<String, Long>> expectedWordCounts = Arrays.asList(
             new KeyValue<>("hello", 1L),
             new KeyValue<>("all", 1L),

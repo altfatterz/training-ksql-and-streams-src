@@ -15,6 +15,7 @@ import org.apache.kafka.streams.processor.Punctuator;
 public class CustomMaxAggregatorSupplier implements ProcessorSupplier<String, Long> {
     
     public class CustomMaxAggregator implements Processor<String, Long> {
+
         ProcessorContext context;
         private KeyValueStore<String, Long> store;
     

@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.regex.Pattern;
 
 public class TopologyProvider {
+
     public Topology getTopology(){
         final Serde<String> stringSerde = Serdes.String();
         final Serde<Long> longSerde = Serdes.Long();
