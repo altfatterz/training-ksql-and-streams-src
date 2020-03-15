@@ -17,7 +17,6 @@ services:
     networks:
       - kafka-net
     ports:
-      - 9092:9092
       - 19092:19092
     environment:
       KAFKA_BROKER_ID: 1
@@ -58,7 +57,8 @@ services:
       KSQL_HOST_NAME: ksql-server
       KSQL_APPLICATION_ID: "etl-demo"
       KSQL_LISTENERS: "http://0.0.0.0:8088"
-      KSQL_CACHE_MAX_BYTES_BUFFERING: 0
+      #      default value is 10000000 (10 MB)
+      #      KSQL_CACHE_MAX_BYTES_BUFFERING: 0
       KSQL_KSQL_SCHEMA_REGISTRY_URL: "http://schema-registry:8081"
       KSQL_PRODUCER_INTERCEPTOR_CLASSES: "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor"
       KSQL_CONSUMER_INTERCEPTOR_CLASSES: "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"

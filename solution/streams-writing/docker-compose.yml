@@ -15,7 +15,6 @@ services:
     networks:
       - streams-net
     ports:
-      - 9092:9092
       - 19092:19092
     environment:
       KAFKA_BROKER_ID: 1

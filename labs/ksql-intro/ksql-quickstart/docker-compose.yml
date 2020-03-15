@@ -17,7 +17,6 @@ services:
     networks:
       - ksql-net
     ports:
-      - 9092:9092
       - 19092:19092
     environment:
       KAFKA_BROKER_ID: 1

@@ -26,7 +26,7 @@ quotes = [
 ]
 output_topic = "quotes"
 input_topic = "QUOTES_LOWER"
-bootstrap_servers = "kafka:9092"
+bootstrap_servers = "localhost:19092"
 
 # Function Definitions
 
@@ -62,7 +62,7 @@ def post_expression(ksql):
         "streamsProperties": {"ksql.streams.auto.offset.reset": "earliest"}
     }
     try:
-        r = requests.post("http://ksql-server:8088/ksql", json = data, headers=headers)
+        r = requests.post("http://localhost:8088/ksql", json = data, headers=headers)
     except:
         print("ERROR: " + str(r.status_code) + ", " + r.text)
         raise
