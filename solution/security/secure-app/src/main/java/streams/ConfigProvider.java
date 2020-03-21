@@ -7,7 +7,8 @@ import java.util.Properties;
 public class ConfigProvider {
     public Properties getConfig() throws Exception {
         final Properties props = new Properties();
-        InputStream input = new FileInputStream("/etc/kafka/secrets/secureapp-sample.properties");
+        // TODO modify to your path
+        InputStream input = new FileInputStream("/Users/zoal/projects/kafka/training-ksql-and-streams-src/solution/security/secure-app/scripts/security/secureapp-sample.properties");
         props.load(input);
         return props;
     }

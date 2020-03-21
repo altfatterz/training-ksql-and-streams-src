@@ -4,7 +4,6 @@ services:
     image: confluentinc/cp-zookeeper:5.3.0
     hostname: zookeeper
     restart: always
-    hostname: zookeeper
     container_name: zookeeper
     environment:
       ZOOKEEPER_SERVER_ID: 1

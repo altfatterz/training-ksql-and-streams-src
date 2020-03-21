@@ -4,7 +4,6 @@ services:
     image: confluentinc/cp-zookeeper:5.3.0
     hostname: zookeeper
     restart: always
-    hostname: zookeeper
     container_name: zookeeper
     environment:
       ZOOKEEPER_SERVER_ID: 1
@@ -70,7 +69,7 @@ services:
       KAFKA_SSL_KEY_CREDENTIALS: kafka_sslkey_creds
       KAFKA_SSL_TRUSTSTORE_FILENAME: kafka.kafka.truststore.jks
       KAFKA_SSL_TRUSTSTORE_CREDENTIALS: kafka_truststore_creds
-      # enables 2-way authentication
+      # enables 2-way authentication if connecting via the SSL listener
       KAFKA_SSL_CLIENT_AUTH: "required"
       KAFKA_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM: "HTTPS"
       KAFKA_OPTS: -Djava.security.auth.login.config=/etc/kafka/secrets/broker_jaas.conf
