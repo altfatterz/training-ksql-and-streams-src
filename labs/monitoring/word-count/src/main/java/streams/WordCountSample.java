@@ -8,7 +8,7 @@ public class WordCountSample {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("*** Starting Word Count Sample Application ***");
 
-        Properties config = new ConfigProvider().getConfig("kafka:9092");
+        Properties config = new ConfigProvider().getConfig("localhost:19092");
         Topology topology = new TopologyProvider().getTopology();
         KafkaStreams streams = new KafkaStreams(topology, config);
         streams.start();

@@ -41,7 +41,7 @@ public class ProcessorSample {
     private static Properties getConfig(){
         Properties settings = new Properties();
         settings.put(StreamsConfig.APPLICATION_ID_CONFIG, APPLICATION_ID);
-        settings.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka:9092");
+        settings.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:19092");
         settings.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, 0);
         settings.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         settings.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());

@@ -13,7 +13,9 @@ import java.time.Duration;
 import java.util.Locale;
 
 public class WordCountProcessorSupplier implements ProcessorSupplier<String, String> {
+
     public class WordCountProcessor implements Processor<String, String> {
+
         private ProcessorContext context;
         private KeyValueStore<String, Integer> kvStore;
 
